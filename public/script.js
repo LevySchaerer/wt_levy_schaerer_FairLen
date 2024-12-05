@@ -4,6 +4,24 @@ function handleFormSubmit(id) {
     event.preventDefault();
     let element = document.getElementById(`input${id}`);
     console.log(element.value);
+    
+
+
+    const comment = document.getElementById(`input${id}`).value;
+    try {
+        const response = fetch(`/api/${id}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ comment })
+        });
+        const result = response.json();
+        alert(result.message);
+        loadComments(id);
+    } catch (error) {
+        console.error('Fehler beim Senden der Daten:', error);
+    }
+    
+
     document.getElementById(`input${id}`).value = "";
 }
 
