@@ -1,0 +1,217 @@
+*. {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    background-color: black;
+}
+/*--------------------Main Page---------------------*/
+.posts {
+    background-color: rgba(0, 0, 0, 0.945);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.945);
+    color: white;
+    font-family: sans-serif;
+    font-size: 2.4rem;
+    border-bottom: 5px solid rgb(165, 165, 165);
+}
+
+
+.imgcontainer {
+    width: 750px;
+    height: 250px;
+    overflow: hidden;
+    border: 5px solid white;
+    border-radius: 20px;
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: height 0.5s ease, background-color 0.3s ease;
+}
+
+.imgcontainer form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 25px;
+    margin: 20px 0;
+}
+
+.imgcontainer img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.active {
+    height: 1150px;
+    background-color: white;
+}
+
+.input{
+    width: 70%;
+    padding: 10px;
+    font-size: 30px;
+    border: 5px solid black;
+    border-radius: 20px;
+}
+
+#publish {
+    width: 150px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 800;
+}
+
+.comments {
+    width: 100%;
+}
+
+.comment {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.comment p {
+    width: 80%;
+    border: 5px solid black;
+    padding: 12px;
+    font-size: 30px;
+    border-radius: 20px;
+}
+
+.end {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+}
+/*--------------------Login / Start Page---------------------*/
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 200px auto 0 auto;
+    width: 750px;
+    height: 160px;
+    border: 5px solid rgb(165, 165, 165);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.loginactive {
+    height: 532px;
+}
+
+.subTitle {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    color: white;
+    font-family: sans-serif;
+    font-size: 2rem;
+}
+
+.username input {
+    width: 600px;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid white;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    font-size: 1.9rem;
+    outline: none;
+    margin: 20px 0;
+}
+
+.password input {
+    width: 600px;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid white;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    font-size: 1.9rem;
+    outline: none;
+    margin: 20px 0;
+}
+
+.submitlogin {
+    width: 375px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid rgb(165, 165, 165);
+    background-color: white;
+    margin: 50px 0;
+}
+
+.submitlogin a {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+}
+
+#or {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-family: sans-serif;
+    font-size: 1.1rem;
+}
+
+.registerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 750px;
+    height: 160px;
+    border: 5px solid rgb(165, 165, 165);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.registeractive {
+    height: 532px;
+}
+
+.Tester {
+    border: 5px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 900px;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.Tester a {
+    color: black;
+    text-decoration: none;
+}
+

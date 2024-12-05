@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <script src="script.js" defer></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="styless.css">
+        <title>Bilder</title>
+    </head>
+    <body>
+        <div class="title">
+            <h1>Fair-Len</h1>
+        </div>
+
+        <div class="posts">
+            <div class="imgcontainer" id="imgcontainer1">
+                <img src="Images/01 .jpg" alt="" id="img1" onclick="openPost(1)">
+                <form onsubmit="handleFormSubmit(1)">
+                    <input type="text" class="input" id="input1" placeholder="Comment something">
+                    <button href="#" class="input" id="publish" type="submit">Publish</button>
+                </form>
+                <div class="comments" id="comments1">
+                    <div class="comment">
+                        <i class="fas fa-user fa-5x" id="icon"></i>
+                        <p>Das ist ein Wunderschönes Bild ich finde es sehr toll.</p>
+                    </div>
+                    <div class="end"><p>No Comments Left!</p></div>
+                </div>
+            </div>
+        
+            <div class="imgcontainer" id="imgcontainer2">
+                <img src="Images/02 .jpg" alt="" id="img2" onclick="openPost(2)">
+                <form onsubmit="handleFormSubmit(2)">
+                    <input type="text" class="input" id="input2" placeholder="Comment something">
+                    <button href="#" class="input" id="publish" type="submit">Publish</button>
+                </form>
+                <div class="comments">
+                    <div class="comment">
+                        <i class="fas fa-user fa-5x" id="icon"></i>
+                        <p>Das ist ein Wunderschönes Bild ich finde es sehr toll.</p>
+                    </div>
+                    <div class="end"><p>No Comments Left!</p></div>
+                </div>
+            </div>
+        
+            <div class="imgcontainer" id="imgcontainer3" onclick="openPost(3)">
+                <img src="Images/03 .png" alt="" id="img3">
+                <form onsubmit="handleFormSubmit(3)">
+                    <input type="text" class="input" id="input3" placeholder="Comment something">
+                    <button href="#" class="input" id="publish" type="submit">Publish</button>
+                </form>
+                <div class="comments">
+                    <div class="comment">
+                        <i class="fas fa-user fa-5x" id="icon"></i>
+                        <p>Das ist ein Wunderschönes Bild ich finde es sehr toll.</p>
+                    </div>
+                    <div class="end"><p>No Comments Left!</p></div>
+                </div>
+            </div>
+        
+            <div class="imgcontainer" id="imgcontainer4">
+                <img src="Images/04 .jpg" alt="" id="img4" onclick="openPost(4)">
+                <form onsubmit="handleFormSubmit(4)">
+                    <input type="text" class="input" id="input4" placeholder="Comment something">
+                    <button href="#" class="input" id="publish" type="submit">Publish</button>
+                </form>
+                <div class="comments">
+                    <div class="comment">
+                        <i class="fas fa-user fa-5x" id="icon"></i>
+                        <p>Das ist ein Wunderschönes Bild ich finde es sehr toll.</p>
+                    </div>
+                    <div class="comment">
+                        <i class="fas fa-user fa-5x" id="icon"></i>
+                        <p>Das ist ein Wunderschönes Bild ich finde es sehr toll.</p>
+                    </div>
+                    <div class="comment">
+                        <i class="fas fa-user fa-5x" id="icon"></i>
+                        <p>Das ist ein Wunderschönes Bild ich finde es sehr toll.</p>
+                    </div>
+                    <div class="end"><p>No Comments Left!</p></div>
+                </div>
+            </div>
+
+
+        </div>
+    
+    </body>
+</html>
