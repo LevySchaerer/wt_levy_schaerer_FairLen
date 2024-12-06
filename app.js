@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 const db = mysql.createConnection({
-    host: '172.16.2.196',
+    host: 'localhost',
     user: 'app',
     password: '00PW4AppUser00',
     database: 'fair_len'

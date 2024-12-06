@@ -18,33 +18,36 @@ body {
 }
 
 header {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-    grid-template-areas: "top" "bottom";
-    gap: 10px;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.945);
+    align-items: center;
+    padding: 20px;
+}
+
+.top {
+    margin-bottom: 2%;
+}
+
+.top h1 {
     color: white;
     font-family: sans-serif;
-    font-size: 2.4rem;
-    border-bottom: 5px solid rgb(165, 165, 165);
-    margin-bottom: 200px;
+    font-size: 5rem;
+    text-align: center;
 }
 
 .bottom {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.bottom img{
-    filter: invert(100%);
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
+.bottom img {
+    width: 50px;
+    height: auto;
+}
 
 .imgcontainer {
     opacity: 0.5;
@@ -147,63 +150,66 @@ header {
     font-size: 25px;
 }
 /*--------------------Login / Start Page---------------------*/
+
+.bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .loginContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 200px auto 0 auto;
-    width: 750px;
-    height: 160px;
+    margin: 10% auto 0 auto;
+    width: 80%;
+    max-width: 500px;
+    height: 130px;
+    max-height: 400px;
     border: 5px solid rgb(165, 165, 165);
     border-radius: 20px;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
+    align-items: center;
 }
 
 .loginactive {
-    height: 532px;
+    height: 600px;
 }
 
 .subTitle {
     display: flex;
     justify-content: center;
-    width: 700px;
+    width: 100%;
     color: white;
     font-family: sans-serif;
     font-size: 2rem;
+    margin: 0;
 }
 
-.username input {
-    width: 600px;
-    padding: 10px;
+.subTitle h1 {
+    margin: 8% 0;
+}
+
+.loginContainer input {
+    width: 70%;
+    padding: 2%;
     border: none;
     border-bottom: 2px solid white;
     background: rgba(0, 0, 0, 0);
     color: white;
-    font-size: 1.9rem;
+    font-size: 1.2rem;
     outline: none;
-    margin: 20px 0;
-}
-
-.password input {
-    width: 600px;
-    padding: 10px;
-    border: none;
-    border-bottom: 2px solid white;
-    background: rgba(0, 0, 0, 0);
-    color: white;
-    font-size: 1.9rem;
-    outline: none;
-    margin: 20px 0;
+    margin: 2% 0;
 }
 
 .submitlogin {
-    width: 375px;
+    width: 60%;
     padding: 10px;
     border-radius: 20px;
     border: 2px solid rgb(165, 165, 165);
     background-color: white;
-    margin: 50px 0;
+    margin: 8% 0;
 }
 
 .submitlogin a {
@@ -228,32 +234,31 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 auto;
-    width: 750px;
-    height: 160px;
+    margin: 0 auto 0 auto;
+    width: 80%;
+    max-width: 500px;
+    height: 130px;
+    max-height: 400px;
     border: 5px solid rgb(165, 165, 165);
     border-radius: 20px;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
+    align-items: center;
 }
 
 .registeractive {
-    height: 532px;
+    height: 600px;
 }
 
-.Tester {
-    border: 5px solid white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 500px;
-    width: 900px;
-    background-color: white;
-    border-radius: 30px;
-}
-
-.Tester a {
-    color: black;
-    text-decoration: none;
+.registerContainer input {
+    width: 70%;
+    padding: 2%;
+    border: none;
+    border-bottom: 2px solid white;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    font-size: 1.2rem;
+    outline: none;
+    margin: 2% 0;
 }
 

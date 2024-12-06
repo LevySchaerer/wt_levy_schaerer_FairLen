@@ -24,8 +24,6 @@ async function handleFormSubmit(id) {
         console.error('Fehler beim Senden der Daten:', error);
     }
     
-
-    document.getElementById(`input${id}`).value = "";
 }
 
 function openPost(id) {
