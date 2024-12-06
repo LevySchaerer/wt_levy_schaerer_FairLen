@@ -1,48 +1,59 @@
-pkdkgdfgkdgkpokgkgdfkg;l gkl;gkfglkgpoekgpoes<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html>
     <head>
-        
         <link rel="stylesheet" href="styless.css">
         <title>Bilder</title>
         <script src="script.js" defer></script>
     </head>
 
     <body>
-        <div class="title">
-            <h1>Fair-Len</h1>
-        </div>
-        <div class="loginContainer" id="login">
-            <div class="subTitle" onclick="openLogin()">
-                <h1>Login</h1>
+        <header>
+            <div class="top"><h1 class="Title">Fair-Len</h1></div>
+            <div class="bottom">
+                <img src="/public/Grafics/Icons/profile-circle.512x511.png" alt="">
+                <img src="/public/Grafics/Icons/home.461x512.png" alt="">
+                <img src="/public/Grafics/Icons/mail.512x419.png" alt="">
+                <img src="/public/Grafics/Icons/profile-circle.512x512.png" alt="">
             </div>
-            <div class="username">
-                <input type="text" placeholder="Username">
-            </div>
-            <div class="password">
-                <input type="password" placeholder="Password">
-            </div>
-            <div class="submitlogin">
-                <a href="http://172.16.2.196:5000/webseite">Submit</a>
-            </div>
-        </div>
-        <div id="or">
-            <h1>or</h1>
-        </div>
-        <div class="registerContainer" id="register">
-            <div class="subTitle" onclick="openRegister()">
-                <h1>Register</h1>
-            </div>
-            <div class="username">
-                <input type="text" placeholder="Username">
-            </div>
-            <div class="password">
-                <input type="password" placeholder="Password">
-            </div>
-            <div class="submitlogin">
-                <a href="http://172.16.2.196:5000/webseite">Submit</a>
-            </div>
-        </div>
 
+        </header>
+
+        <main>
+            <section class="loginContainer" id="login">
+
+                <div class="subTitle" onclick="openLogin()">
+                    <h1>Login</h1>
+                </div>
+                <div class="username">
+                    <input type="text" placeholder="Username">
+                </div>
+                <div class="password">
+                    <input type="password" placeholder="Password">
+                </div>
+                <div class="submitlogin">
+                    <a href="http://172.16.2.196:5000/webseite">Submit</a>
+                </div>
+            </section>
+
+            <div id="or">
+                <h1>or</h1>
+            </div>
+            
+            <section   class="registerContainer" id="register">
+                <div class="subTitle" onclick="openRegister()">
+                    <h1>Register</h1>
+                </div>
+                <div class="username">
+                    <input type="text" placeholder="Username">
+                </div>
+                <div class="password">
+                    <input type="password" placeholder="Password">
+                </div>
+                <div class="submitlogin">
+                    <a href="http://172.16.2.196:5000/webseite">Submit</a>
+                </div>
+            </section>
+        </main>
     </body>
 </html>
