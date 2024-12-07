@@ -20,7 +20,8 @@ async function handleFormSubmit(id) {
     } catch (error) {
         console.error('Fehler beim Senden der Daten:', error);
     }
-    
+
+    document.getElementById(`input${id}`).value = ""
 }
 
 function openPost(id) {
@@ -61,10 +62,4 @@ function openRegister() {
     element.classList.remove("loginactive");
     const login = document.getElementById(`register`); 
      login.classList.toggle("registeractive");
-}
-
-function hideButton(id) {
-    const button = document.getElementById(`publish${id}`);
-    console.log(button)
-    button.classList.toggle("publishhidden");
 }

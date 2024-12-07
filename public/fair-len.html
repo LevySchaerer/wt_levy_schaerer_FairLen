@@ -27,9 +27,11 @@
             <div class="posts">
                 <article class="imgcontainer" id="imgcontainer1">
                     <img src="Grafics/Images/Kakten.png" alt="" id="img1" onclick="openPost(1)">
-                <form onsubmit="handleFormSubmit(1)">
-                        <input type="text" class="input" id="input1" placeholder="Comment something">
-                        <button href="#" class="publish" id="publish1" type="submit">Publish</button>
+                    <form onsubmit="handleFormSubmit(1)">
+                        <input type="text" class="input" id="input1" placeholder="Comment something" onfocus="hideButton(1)" onblur="hideIcon(1)">
+                        <div class="publish-icon" id="publish-icon1">
+                            <img src="Grafics/Icons/plane.512x512.png" alt="" onclick="handleFormSubmit(1)">
+                        </div>
                     </form>
                     <div class="comments" id="comments1">
 
