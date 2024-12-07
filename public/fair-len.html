@@ -2,6 +2,8 @@
 
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="script.js" defer></script>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
         <link rel="stylesheet" href="styless.css">
@@ -9,7 +11,15 @@
     </head>
     <body>
         <header>
-            <h1>Fair-Len</h1>
+            <div class="top"><h1>Fair-Len</h1></div>
+            <div class="bottom">
+                <img src="Grafics/Icons/camera-plus.512x487.png" alt="Icon" width="100" height="100">
+                <img src="Grafics/Icons/profile-circle.512x511.png" alt="Icon" width="100" height="100">
+                <img src="Grafics/Icons/mail.512x419.png" alt="Icon" width="100" height="100">
+                <img src="Grafics/Icons/profile-circle.512x512.png" alt="Icon" width="100" height="100">
+                
+            </div>
+
         </header>
         
         <main>
@@ -17,9 +27,9 @@
             <div class="posts">
                 <article class="imgcontainer" id="imgcontainer1">
                     <img src="Grafics/Images/Kakten.png" alt="" id="img1" onclick="openPost(1)">
-                    <form onsubmit="handleFormSubmit(1)">
+                <form onsubmit="handleFormSubmit(1)">
                         <input type="text" class="input" id="input1" placeholder="Comment something">
-                        <button href="#" class="input" id="publish" type="submit">Publish</button>
+                        <button href="#" class="publish" id="publish1" type="submit">Publish</button>
                     </form>
                     <div class="comments" id="comments1">
 
@@ -29,8 +39,8 @@
                 <article class="imgcontainer" id="imgcontainer2">
                     <img src="Grafics/Images/Berge.png" alt="" id="img2" onclick="openPost(2)">
                     <form onsubmit="handleFormSubmit(2)">
-                        <input type="text" class="input" id="input2" placeholder="Comment something">
-                        <button href="#" class="input" id="publish" type="submit">Publish</button>
+                        <input type="text" class="input" id="input2" placeholder="Comment something" onfocus="hideButton(2)">
+                        <button href="#" class="publish" id="publish2" type="submit">Publish</button>
                     </form>
                     <div class="comments" id="comments2">
 
@@ -41,7 +51,7 @@
                     <img src="Grafics/Images/Fluss.png" alt="" id="img3">
                     <form onsubmit="handleFormSubmit(3)">
                         <input type="text" class="input" id="input3" placeholder="Comment something">
-                        <button href="#" class="input" id="publish" type="submit">Publish</button>
+                        <button href="#" class="publish" id="publish3" type="submit">Publish</button>
                     </form>
                     <div class="comments" id="comments3">
 
@@ -52,14 +62,56 @@
                     <img src="Grafics/Images/Savanne.png" alt="" id="img4" onclick="openPost(4)">
                     <form onsubmit="handleFormSubmit(4)">
                         <input type="text" class="input" id="input4" placeholder="Comment something">
-                        <button href="#" class="input" id="publish" type="submit">Publish</button>
+                        <button href="#" class="publish" id="publish4" type="submit">Publish</button>
                     </form>
                     <div class="comments" id="comments4">
 
                     </div>
                 </article>
     
-    
+                <article class="imgcontainer" id="imgcontainer5">
+                    <img src="Grafics/Images/See.png" alt="" id="img5" onclick="openPost(5)">
+                    <form onsubmit="handleFormSubmit(5)">
+                        <input type="text" class="input" id="input5" placeholder="Comment something">
+                        <button href="#" class="publish" id="publish5" type="submit">Publish</button>
+                    </form>
+                    <div class="comments" id="comments5">
+
+                    </div>
+                </article>
+
+                <article class="imgcontainer" id="imgcontainer6">
+                    <img src="Grafics/Images/Strand.png" alt="" id="img6" onclick="openPost(6)">
+                    <form onsubmit="handleFormSubmit(6)">
+                        <input type="text" class="input" id="input6" placeholder="Comment something">
+                        <button href="#" class="publish" id="publish6" type="submit">Publish</button>
+                    </form>
+                    <div class="comments" id="comments6">
+
+                    </div>
+                </article>
+
+                <article class="imgcontainer" id="imgcontainer7">
+                    <img src="Grafics/Images/Wald.png" alt="" id="img7" onclick="openPost(7)">
+                    <form onsubmit="handleFormSubmit(7)">
+                        <input type="text" class="input" id="input7" placeholder="Comment something">
+                        <button href="#" class="publish" id="publish7" type="submit">Publish</button>
+                    </form>
+                    <div class="comments" id="comments7">
+
+                    </div>
+                </article>
+
+                <article class="imgcontainer" id="imgcontainer8">
+                    <img src="Grafics/Images/See1.png" alt="" id="img8" onclick="openPost(8)">
+                    <form onsubmit="handleFormSubmit(8)">
+                        <input type="text" class="input" id="input8" placeholder="Comment something">
+                        <button href="#" class="publish" id="publish8" type="submit">Publish</button>
+                    </form>
+                    <div class="comments" id="comments8">
+
+                    </div>
+                </article>
             </div>
         </main>
     

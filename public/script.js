@@ -1,11 +1,8 @@
 
-
 async function handleFormSubmit(id) {
     let element = document.getElementById(`input${id}`);
     console.log(element.value);
     
-
-
     const comment = document.getElementById(`input${id}`).value;
     try {
         const response = await fetch(`/api/${id}`, {
@@ -39,7 +36,7 @@ function openPost(id) {
         let commentsData = "";
         data.forEach((comment) => {
             commentsData = `<div class="comment">
-                        <i class="fas fa-user fa-5x" id="icon"></i>
+                        <img src="Grafics/Icons/profile-circle.512x511.png" alt="">
                         <p>${comment["comment"]}</p>
                     </div>` + commentsData;
         });
@@ -52,7 +49,6 @@ function openPost(id) {
 function openLogin() {
     const element = document.getElementById(`register`)
     element.classList.remove("registeractive");
-    console.log("Hello")
     const login = document.getElementById(`login`); 
     login.classList.toggle("loginactive");
 }
@@ -63,8 +59,12 @@ element.classList.toggle("loginactive");
 function openRegister() {
     const element = document.getElementById(`login`)
     element.classList.remove("loginactive");
-    console.log("Hello")
     const login = document.getElementById(`register`); 
-    login.classList.toggle("registeractive");
+     login.classList.toggle("registeractive");
 }
 
+function hideButton(id) {
+    const button = document.getElementById(`publish${id}`);
+    console.log(button)
+    button.classList.toggle("publishhidden");
+}
