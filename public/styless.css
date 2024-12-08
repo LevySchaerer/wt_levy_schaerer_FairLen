@@ -3,11 +3,15 @@
     margin: 0;
 }
 
+*::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     margin: 0;
     background-color: black;
 }
-/*--------------------Main Page---------------------*/
+/*!-----------------------------Main Page------------------------------*/
 .posts {
     background-color: rgba(0, 0, 0, 0.945);
     display: flex;
@@ -22,7 +26,14 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 20px;
+}
+
+header a {
+    transition: all 0.4s ease;
+}
+
+header a:hover { 
+    scale: 1.3;
 }
 
 h1 {
@@ -48,8 +59,6 @@ h1 {
     width: 30px;
     height: auto;
 }
-
-
 
 /* .bottom {
     display: flex;
@@ -98,7 +107,8 @@ h1 {
     flex-direction: row;
     justify-content: center;
     gap: 10px;
-    margin: 20px 0;
+    margin: 5px 0;
+    padding: 10px;
 }
 
 .imgcontainer img {
@@ -107,7 +117,7 @@ h1 {
 }
 
 .active {
-    overflow: auto;
+    overflow: 0 auto;
     height: 680px;
     background-color: rgb(30, 30, 30);
 }
@@ -124,7 +134,7 @@ h1 {
 
 .input:focus {
     transition: all 0.5s ease;
-    width: 80%;
+    width: 72%;
     outline: none;
     border: 3px solid rgb(174,1,255);
 }
@@ -150,7 +160,7 @@ h1 {
 
 .comments {
     width: 100%;
-    overflow: auto;
+    overflow: 0 aout;
 }
 
 .comments::-webkit-scrollbar {
@@ -215,7 +225,7 @@ h1 {
     margin-bottom: 20px;
     color: white;
 }
-/*--------------------Login / Start Page---------------------*/
+/*!--------------------Login / Start Page---------------------*/
 
 .bottom {
     display: flex;
@@ -238,20 +248,9 @@ h1 {
     transition: height 0.3s ease;
 }
 
-@media (max-width: 600px) {
-    .loginContainer {
-        height: 65px;
-    }
-}
 
 .loginactive {
     height: 380px;
-}
-
-@media (max-width: 600px) {
-    .loginactive {
-        height: 280px;
-    }
 }
 
 .subTitle {
@@ -281,11 +280,6 @@ h1 {
     margin: 4% 0;
 }
 
-@media (min-width: 600px) {
-    .loginContainer input {
-        width: 60%;
-    }
-}
 
 .submitlogin {
     width: 35%;
@@ -294,10 +288,6 @@ h1 {
     border: 2px solid rgb(165, 165, 165);
     background-color: white;
     margin: auto 0;
-}
-
-@media (min-width: 600px) {
-    .submitlogin
 }
 
 .submitlogin a {
@@ -323,7 +313,164 @@ h1 {
 }
 
 @media (max-width: 600px) {
+    .loginContainer {
+        height: 65px;
+    }
+    
+    .loginactive {
+        height: 280px;
+    }
+    
     .registeractive {
         height: 280px;
     }
+}
+
+@media (min-width: 600px) {
+    .loginContainer input {
+        width: 60%;
+    }
+    
+    .imgcontainer {
+        margin: 2% 0;
+        height: 180px;
+        max-width: 500px;
+    }
+
+    .active {
+        height: 1000px;
+    }
+
+    .bottom {
+        margin-bottom: 8%;
+    }
+}
+
+@media (min-width: 1900px) {
+    .loginContainer input {
+        width: 60%;
+    }
+    
+    .imgcontainer {
+        margin: 1% 0;
+        height: 300px;
+        width: 80%;
+        max-width: 600px;
+    }
+
+    .active {
+        height: 1200px;
+    }
+
+    .bottom {
+        margin-bottom: 5%;
+    }
+    
+}
+/*! -------------------------Profile Page--------------------------- */
+
+.profile {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    max-width: 500px;
+    height: 100%;
+    display: flex;
+    margin: 0 auto 50px auto;
+    gap: 5%;
+}
+
+.profile img {
+    height: 100px;
+}
+
+.description h3 {
+    color: white;
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.description p {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-top: 10px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 15px 30px;
+    gap: 5px;
+    transition: all 0.3s ease;
+}
+
+.stats img {
+    padding: 0 30px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+.stats h5 {
+    padding: 0 30px;
+    height: 10px;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 450;
+}
+
+.stats h4 {
+    padding: 0 30px;
+    height: 10px;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 650;
+}
+
+.stats:nth-child(3n+1):hover {
+    scale: 1.1;
+}
+
+/*! -------------------------Bottom Footer--------------------------- */
+
+footer {
+    margin-bottom: 2%;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(2, 40%);
+    grid-template-rows: repeat(2, auto);
+    margin: 0 auto;
+    justify-content: center;
+    width: 500px;
+    height: 120px;
+    margin-top: 9%;
+    border-bottom: 1px solid white;
+}
+
+.footer h3 {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 10;
+    transition: all 0.4s ease;
+}
+
+.footer h3:hover {
+    color: rgb(174,1,255);
+    scale: 1.1;
+}
+
+#end {
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-top: 20px;
 }
