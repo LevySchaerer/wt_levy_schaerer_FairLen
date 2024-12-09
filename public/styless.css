@@ -55,6 +55,10 @@ h1 {
     margin-top: 2%;
 }
 
+.bottom a {
+    position: sticky;
+}
+
 .bottom img {
     width: 30px;
     height: auto;
@@ -448,22 +452,24 @@ h1 {
     grid-template-rows: repeat(6, 1fr);
     max-width: 500px;
     margin: 0 auto;
+    gap: 20px;
 }
 
 .profilpost {
-    padding: 10px;
     border: 1px solid white;
+    border-radius: 20px;
     overflow: hidden;
 }
 
 .postsgrid img {
+    scale: 1.5;
     width: 100%;
     display: flex;
     transition: all 0.3s ease;
 }
 
 .postsgrid img:hover {
-    transform: scale(1.5);
+    transform: scale(0.67);
 }
 
 /*! -------------------------Bottom Footer--------------------------- */
