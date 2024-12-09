@@ -248,6 +248,10 @@ h1 {
     transition: height 0.3s ease;
 }
 
+#login {
+    margin-top: 40%;
+}
+
 
 .loginactive {
     height: 380px;
@@ -312,6 +316,8 @@ h1 {
     height: 380px;
 }
 
+/* !--------------------------- Media ----------------------------- */
+
 @media (max-width: 600px) {
     .loginContainer {
         height: 65px;
@@ -344,6 +350,10 @@ h1 {
     .bottom {
         margin-bottom: 8%;
     }
+
+    #login {
+        margin-top: 20%;
+    }
 }
 
 @media (min-width: 1900px) {
@@ -364,6 +374,10 @@ h1 {
 
     .bottom {
         margin-bottom: 5%;
+    }
+
+    #login {
+        margin-top: 5%;
     }
     
 }
@@ -397,12 +411,11 @@ h1 {
     padding-top: 10px;
 }
 
-.stats {
+.stats div {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 15px 30px;
-    gap: 5px;
     transition: all 0.3s ease;
+    height: 30px;
 }
 
 .stats img {
@@ -429,8 +442,28 @@ h1 {
     font-weight: 650;
 }
 
-.stats:nth-child(3n+1):hover {
-    scale: 1.1;
+.postsgrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.profilpost {
+    padding: 10px;
+    border: 1px solid white;
+    overflow: hidden;
+}
+
+.postsgrid img {
+    width: 100%;
+    display: flex;
+    transition: all 0.3s ease;
+}
+
+.postsgrid img:hover {
+    transform: scale(1.5);
 }
 
 /*! -------------------------Bottom Footer--------------------------- */
