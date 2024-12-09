@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styless.css">
+        <title>Bilder</title>
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <div class="top"><h1>Fair-Len</h1></div>
+            <div class="bottom">
+                <a href="home.html"><img src="Grafics/Icons/home.461x512.svg" alt="Icon"></a>
+                <a href=""><img src="Grafics/Icons/camera-plus.512x487.svg" alt="Icon"></a>
+                <a href=""><img src="Grafics/Icons/mail.512x419.svg" alt="Icon"></a>
+                <a href="profile.html"><img src="Grafics/Icons/profile-circle.512x512.svg" alt="Icon"></a>
+                
+            </div>
+        </header>
+        <section>
+            <div class="chatcontainer">
+                <div class="chatprofile">
+
+                </div>
+                <div class="chatmessages">
+
+                </div>
+                <form onsubmit="handleFormSubmit(1)">
+                    <input type="text" class="input" id="input1" placeholder="Comment something" onfocus="hideButton(1)" onblur="hideIcon(1)">
+                    <div class="publish-icon" id="publish-icon1">
+                        <img src="Grafics/Icons/plane.512x512.svg" alt="" onclick="handleFormSubmit(1)">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </body>
+</html>

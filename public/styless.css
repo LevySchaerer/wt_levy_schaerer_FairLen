@@ -471,6 +471,50 @@ h1 {
 .postsgrid img:hover {
     transform: scale(0.67);
 }
+/*! -------------------------Bottom Footer--------------------------- */
+
+
+.messagescontainer {
+    display: flex;
+    justify-content: center;
+}
+
+.chatcontainer {
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    height: 700px;
+    border-radius: 40px;
+    border: 5px solid white;
+}
+
+.chatprofile {
+    display: flex;
+    align-items: center;
+}
+
+.chatprofile h3 {
+    color: white;
+    font-family: sans-serif;
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.chatprofile p {
+    color: white;
+    font-family: sans-serif;
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+
 
 /*! -------------------------Bottom Footer--------------------------- */
 
