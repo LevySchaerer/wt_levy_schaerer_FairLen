@@ -44,7 +44,7 @@ app.get('/test', (req, res) => {
 });
 
 app.get('/webseite', (req, res) => {
-    res.sendFile(__dirname + '/public/fair-len.html');
+    res.sendFile(__dirname + '/public/home.html');
 });
 
 app.get('/api/:id', (req, res) => {
