@@ -7,15 +7,7 @@ body {
     margin: 0;
     background-color: black;
 }
-/*!-----------------------------Main Page------------------------------*/
-.posts {
-    background-color: rgba(0, 0, 0, 0.945);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 0;
-}
+/*!-----------------------------Main Page Header ------------------------------*/
 
 header {
     display: flex;
@@ -60,6 +52,17 @@ h1 {
     height: auto;
 }
 
+/*!-----------------------------Main Page Posts ------------------------------*/
+
+.posts {
+    background-color: rgba(0, 0, 0, 0.945);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+}
+
 .imgcontainer {
     opacity: 0.5;
     width: 80%;
@@ -101,7 +104,7 @@ h1 {
     height: 680px;
     background-color: rgb(30, 30, 30);
 }
-
+/*!-----------------------------Main Page Comment Section ------------------------------*/
 .input {
     background-color: rgb(201, 201, 201);
     width: 70%;
@@ -364,7 +367,7 @@ h1 {
     }
     
 }
-/*! -------------------------Profile Page--------------------------- */
+/*! -------------------------Profile Page Description --------------------------- */
 
 .profile {
     display: flex;
@@ -424,7 +427,7 @@ h1 {
     font-family: sans-serif;
     font-weight: 650;
 }
-
+/*! -------------------------Profile Page Posts --------------------------- */
 .postsgrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -582,7 +585,7 @@ footer {
 /*! ------------------------- Settings --------------------------- */
 
 .setting-container {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     position: absolute;
