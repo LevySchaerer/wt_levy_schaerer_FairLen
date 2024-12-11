@@ -14,18 +14,22 @@
             <div class="top"><h1>Fair-Len</h1></div>
         </header>
 
-        <main>
+        <main class="start-page">
             <section class="loginContainer" id="login">
 
                 <div class="subTitle" onclick="openLogin()">
                     <h1>Login</h1>
                 </div>
-                <input type="text" placeholder="Username">
-                <input type="password" placeholder="Password">
-
-                <div class="submitlogin">
-                    <a href="http://172.16.2.196:5000/webseite">Submit</a>
-                </div>
+                <form class="login-form" action="http://172.16.2.204:3000/home.html">
+                    <input class="input-errors" type="text" placeholder="Username" required minlength="8" maxlength="30">
+                    <p class="hide-errormessage"></p>
+                    <input class="input-errors" type="password" placeholder="Password" required minlength="8" maxlength="50">
+                    <p class="hide-errormessage"></p>
+                    
+                    <div class="submitlogin">
+                        <button>Submit</button>
+                    </div>
+                </form>
             </section>
 
             <div id="or">
@@ -36,12 +40,19 @@
                 <div class="subTitle" onclick="openRegister()">
                     <h1>Register</h1>
                 </div>
-                <input type="text" placeholder="Username">
-                <input type="password" placeholder="Password">
-                
-                <div class="submitlogin">
-                    <a href="http://172.16.2.196:5000/webseite">Submit</a>
-                </div>
+                <form class="login-form" action="http://172.16.2.204:3000/home.html">
+                    <input class="input-errors" type="text" placeholder="Name" required minlength="8" maxlength="30">
+                    <p class="hide-errormessage"></p>
+                    <input class="input-errors" type="text" placeholder="Username" required minlength="8" maxlength="30">
+                    <p class="hide-errormessage"></p>
+                    <input class="input-errors" type="password" placeholder="Password" required minlength="8" maxlength="50">
+                    <p class="hide-errormessage"></p>
+                    <input class="input-errors" type="password" placeholder="Confirm Password" required minlength="8" maxlength="50">
+                    <p class="hide-errormessage"></p>
+                    <div class="submitlogin">
+                        <button>Submit</button>
+                    </div>
+                </form>
             </section>
         </main>
     </body>

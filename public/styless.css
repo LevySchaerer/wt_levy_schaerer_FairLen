@@ -60,26 +60,6 @@ h1 {
     height: auto;
 }
 
-/* .bottom {
-    display: flex;
-    gap: 5rem;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.bottom img {
-    cursor: pointer;
-    width: 40px;
-    height: auto;
-    margin-bottom: 20%;
-    border-bottom: 3px solid white;
-}
-
-.bottomactive img {
-    padding-bottom: 8px;
-} */
-
 .imgcontainer {
     opacity: 0.5;
     width: 80%;
@@ -149,6 +129,12 @@ h1 {
     transition: all 0.3s ease-in-out;
 }
 
+.publish-icon button {
+    width: 90%;
+    border: none;
+    background-color: rgb(174,1,255);
+}
+
 .publish-icon:hover {
     box-shadow: rgb(255, 255, 255) 0px 0px 10px 0px;
 }
@@ -157,7 +143,6 @@ h1 {
     width: 20px;
     border-radius: 0;
 }
-
 
 .comments {
     width: 100%;
@@ -188,29 +173,13 @@ h1 {
     margin: 30px 0;
 }
 
-.comment p::-webkit-scrollbar {
-    width:  5px;
-    height: 5px;
-}
-
-.comment p::-webkit-scrollbar-thumb {
-    background-color: rgb(123, 123, 123);
-    border-radius: 5px;
-}
-
-.comment p::-webkit-scrollbar-thumb:hover {
-    background-color: rgb(117, 0, 172);
-}
-
 .comment p {
-    display: flex;
     flex-wrap: wrap;
     overflow: auto;
     width: 80%;
     color: white;
     border-bottom: 1px solid rgb(149, 149, 149);
     padding: 8px;
-    font-size: 1.2fr;
 }
 
 .comment img {
@@ -222,7 +191,6 @@ h1 {
 .end {
     display: flex;
     justify-content: center;
-    font-size: 15px;
     margin-bottom: 20px;
     color: white;
 }
@@ -242,7 +210,6 @@ h1 {
     width: 80%;
     max-width: 400px;
     height: 100px;
-    max-height: 400px;
     border: 5px solid rgb(165, 165, 165);
     border-radius: 20px;
     overflow: hidden;
@@ -255,7 +222,16 @@ h1 {
 
 
 .loginactive {
-    height: 380px;
+    height: 340px;
+}
+
+.hide-errormessage {
+    display: none;
+}
+
+.show-errormessage {
+    display: flex;
+    background-color: white;
 }
 
 .subTitle {
@@ -285,23 +261,29 @@ h1 {
     margin: 4% 0;
 }
 
-
 .submitlogin {
+    display: flex;
+    justify-content: center;
     width: 35%;
     padding: 10px;
     border-radius: 20px;
     border: 2px solid rgb(165, 165, 165);
     background-color: white;
-    margin: auto 0;
+    margin: 10% 0;
 }
 
-.submitlogin a {
+.login-form {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+
+.submitlogin button {
+    display: flex;
+    background-color: white;
+    border: none;
     font-size: 1rem;
-    font-family: sans-serif;
-    text-decoration: none;
-    color: black;
     font-weight: 900;
 }
 
@@ -314,7 +296,7 @@ h1 {
 }
 
 .registeractive {
-    height: 380px;
+    height: 420px;
 }
 
 /* !--------------------------- Media ----------------------------- */
@@ -521,7 +503,7 @@ h1 {
 
 .chatmessages {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     margin: 20px auto;
     width: 100%;
     height: 500px;
@@ -536,16 +518,16 @@ h1 {
 
 .message p {
     display: flex;
-    align-items: center;
+    padding: 20px;
 }
+
 
 .message {
     display: flex;
     color: white;
     font-family: sans-serif;
     font-size: 16px;
-    width: 100%;
-    height: auto;
+    margin: 10px;
 }
 
 .chatcontainer form {
@@ -553,15 +535,6 @@ h1 {
     gap: 30px;
     width: 100%;
 }
-
-
-
-
-
-
-
-
-
 
 /*! -------------------------Bottom Footer--------------------------- */
 
@@ -575,7 +548,8 @@ footer {
     grid-template-rows: repeat(2, auto);
     margin: 0 auto;
     justify-content: center;
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     height: 120px;
     margin-top: 9%;
     border-bottom: 1px solid white;
@@ -603,4 +577,30 @@ footer {
     justify-content: center;
     color: white;
     margin-top: 20px;
+}
+
+/*! ------------------------- Settings --------------------------- */
+
+.setting-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.setting-win {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(43, 43, 43, 0.973);
+    max-width: 650px;
+    width: 90%;
+    height: 80%;
+}
+.setting-win h1 {
+    color: white;
 }
