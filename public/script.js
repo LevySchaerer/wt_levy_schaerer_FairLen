@@ -82,15 +82,14 @@ inputs.forEach((input, index) => {
     input.addEventListener('input', function() {
         const errormessage = errormessages[index];
 
-        if (input.value.length < 7) {
-            errormessage.classList.remove(errormessage.classList);
+        if (input.value.length < 8) {
             input.style.borderBottom = "2px solid rgb(194, 0, 0)";
             errormessage.textContent = 'Das sind nicht 8 Zeichen';
             errormessage.classList.add('show-errormessage');
             
         }
 
-        else if (input.value.length > 8) {
+        else if (input.value.length > 7) {
             input.style.borderBottom = "2px solid rgb(51, 255, 0)";
             errormessage.classList.remove(errormessage.classList);
             errormessage.classList.add('hide-errormessage');
