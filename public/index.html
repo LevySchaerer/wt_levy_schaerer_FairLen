@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styless.css">
+        <link rel="stylesheet" href="login.css">
         <title>Bilder</title>
         <script src="script.js" defer></script>
     </head>
@@ -20,7 +21,7 @@
                 <div class="subTitle" onclick="openLogin()">
                     <h1>Login</h1>
                 </div>
-                <form class="login-form" action="http://172.16.2.204:3000/home.html">
+                <form class="login-form" action="/home">
                     <input class="input-errors" type="text" placeholder="Username" required minlength="8" maxlength="30">
                     <p class="hide-errormessage"></p>
                     <input class="input-errors" type="password" placeholder="Password" required minlength="8" maxlength="50">
@@ -40,17 +41,15 @@
                 <div class="subTitle" onclick="openRegister()">
                     <h1>Register</h1>
                 </div>
-                <form class="login-form" action="http://172.16.2.204:3000/home.html">
-                    <input class="input-errors" type="text" placeholder="Name" required minlength="8" maxlength="30">
+                <form class="login-form" id="register-form">
+                    <input class="input-errors" type="text" placeholder="Name" required minlength="8" maxlength="30" id="register-name">
                     <p class="hide-errormessage"></p>
-                    <input class="input-errors" type="text" placeholder="Username" required minlength="8" maxlength="30">
+                    <input class="input-errors" type="text" placeholder="Username" required minlength="8" maxlength="30" id="register-username">
                     <p class="hide-errormessage"></p>
-                    <input class="input-errors" type="password" placeholder="Password" required minlength="8" maxlength="50">
-                    <p class="hide-errormessage"></p>
-                    <input class="input-errors" type="password" placeholder="Confirm Password" required minlength="8" maxlength="50">
+                    <input class="input-errors" type="password" placeholder="Password" required minlength="8" maxlength="50" id="register-password">
                     <p class="hide-errormessage"></p>
                     <div class="submitlogin">
-                        <button>Submit</button>
+                        <button onclick="register()">Submit</button>
                     </div>
                 </form>
             </section>

@@ -43,9 +43,27 @@ app.get('/test', (req, res) => {
     });
 });
 
-app.get('/webseite', (req, res) => {
-    res.sendFile(__dirname + '/public/fair-len.html');
+app.get('/home', (req, res) => {
+    res.sendFile(__dirname + '/public/home.html');
 });
+
+app.get('/profil', (req, res) => {
+    res.sendFile(__dirname + '/public/profile.html');
+});
+
+app.get('/messager', (req, res) => {
+    res.sendFile(__dirname + '/public/Messages.html');
+});
+
+app.get('/conntacts', (req, res) => {
+    res.sendFile(__dirname + '/public/contacts.html');
+});
+
+app.get('/support', (req, res) => {
+    res.sendFile(__dirname + '/public/Support.html');
+});
+
+
 
 app.get('/api/:id', (req, res) => {
     console.log(req.params.id);
@@ -76,6 +94,28 @@ app.post('/api/:id', (req, res) => {
             db.commit();
             return res.status(200).json({ message: 'Kommentar wurde erfolgreich gespeichert' });
         }
+    });
+});
+
+// Register System
+
+app.post('/apii/:username', (req, res) => {
+    const { username, name, password } = req.body;
+
+
+    if (!username || !name || !password) {
+        return res.status(400).json({ message: 'Fehlende Felder: username, name oder password' });
+    }
+
+    console.log(username, name, password)
+
+    const query = 'INSERT INTO user (username, name, password) VALUES (?, ?, ?)';
+    db.query(query, [username, name, password], (err, result) => {
+        if (err) {
+            console.error('Fehler bei der Datenbankanfrage:', err);
+            return res.status(500).send('Fehler beim Speichern der Daten');
+        }
+        res.status(200).send({ message: 'Benutzer erfolgreich registriert' });
     });
 });
 

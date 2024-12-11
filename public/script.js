@@ -71,9 +71,7 @@ function openRegister() {
      login.classList.toggle("registeractive");
 }
 
-// Login 
-
-
+// Login design
 
 const inputs = document.querySelectorAll('input.input-errors[type="text"], input.input-errors[type="password"]');
 const errormessages = document.querySelectorAll('.hide-errormessage')
@@ -90,10 +88,69 @@ inputs.forEach((input, index) => {
         }
 
         else if (input.value.length > 7) {
+            errormessage.classList.remove('show-errormessage');
             input.style.borderBottom = "2px solid rgb(51, 255, 0)";
-            errormessage.classList.remove(errormessage.classList);
             errormessage.classList.add('hide-errormessage');
         }
     });
 })
 
+// Login System
+
+document.getElementById('register-form').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+
+    const username = document.getElementById('register-username').value;
+    const name = document.getElementById('register-name').value;
+    const password = document.getElementById('register-password').value;
+
+    console.log(username, name, password, 'Hallo')
+
+    fetch(`/api/${username}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username })
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Fehler bei der Registrierung: ' + response.statusText);
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('Erfolgreich registriert:', data);
+        alert('Erfolgreich registriert!');
+    })
+    .catch(error => {
+        console.error('Fehler bei der Registrierung:', error);
+        alert('Fehler bei der Registrierung: ' + error.message);
+    });
+});
+
+async function register() {
+    event.preventDefault();
+
+    let username = document.getElementById('register-username').value;
+    let name = document.getElementById('register-name').value;
+    let password = document.getElementById('register-password').value;
+    
+    try {
+        const response = await fetch(`/apii/${username}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ username, name, password })
+        });
+
+
+        if (!response.ok) {
+            const res = response.json();
+            console.error('Error:', res)
+        }
+
+    } catch (error) {
+        console.error('Fehler beim Senden der Daten:', error);
+    }
+    document.getElementById('register-username').value = "";
+    document.getElementById('register-name').value = ""
+    document.getElementById('register-password').value = ""
+}
