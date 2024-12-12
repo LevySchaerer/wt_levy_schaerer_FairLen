@@ -63,7 +63,9 @@ app.get('/support', (req, res) => {
     res.sendFile(__dirname + '/public/Support.html');
 });
 
-
+app.get('/imprint', (req, res) => {
+    res.sendFile(__dirname + '/public/imprint.html');
+});
 
 app.get('/api/:id', (req, res) => {
     console.log(req.params.id);
