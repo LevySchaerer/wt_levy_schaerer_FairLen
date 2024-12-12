@@ -20,9 +20,9 @@ const db = mysql.createConnection({
 
 db.connect((err) => {
     if (err) {
-        console.error('Fehler beim Verbinden mit der Datenbank:', err);
+        console.error('Error mit DB', err);
     } else {
-        console.log('Mit der MySQL-Datenbank verbunden!');
+        console.log('Connected');
     }
 });
 
@@ -30,7 +30,7 @@ db.connect((err) => {
 
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'templates', 'index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 app.get('/test', (req, res) => {
@@ -38,40 +38,44 @@ app.get('/test', (req, res) => {
         if (err) {
             res.status(400).send("Failed:", err);
         } else {
-            res.json({ message: 'It worked'});
+            res.json({ message: 'Succesful'});
         }
     });
 });
 
 app.get('/home', (req, res) => {
-    res.sendFile(__dirname + '/public/home.html');
+    res.sendFile(__dirname + '/public/html/home.html');
 });
 
 app.get('/profil', (req, res) => {
-    res.sendFile(__dirname + '/public/profile.html');
+    res.sendFile(__dirname + '/public/html/profile.html');
 });
 
 app.get('/messager', (req, res) => {
-    res.sendFile(__dirname + '/public/Messages.html');
+    res.sendFile(__dirname + '/public/html/Messages.html');
 });
 
 app.get('/conntacts', (req, res) => {
-    res.sendFile(__dirname + '/public/contacts.html');
+    res.sendFile(__dirname + '/public/html/contacts.html');
 });
 
 app.get('/support', (req, res) => {
-    res.sendFile(__dirname + '/public/Support.html');
+    res.sendFile(__dirname + '/public/html/Support.html');
 });
 
 app.get('/imprint', (req, res) => {
-    res.sendFile(__dirname + '/public/imprint.html');
+    res.sendFile(__dirname + '/public/html/imprint.html');
+});
+
+app.get('/About-US', (req, res) => {
+    res.sendFile(__dirname + '/public/html/about.html');
 });
 
 app.get('/api/:id', (req, res) => {
     console.log(req.params.id);
     db.execute("select comment from comment where post_id = ?", [req.params.id], (err, result) => {
         if (err) {
-            console.error("Kabudddd: ", err);
+            console.error("Tot: ", err);
         } else {
             res.json(result);
         }
@@ -83,7 +87,7 @@ app.post('/api/:id', (req, res) => {
     console.log(comment);
     
     if (!comment) {
-        return res.status(400).json({ message: 'Kommentar ist erforderlich!' });
+        return res.status(400).json({ message: 'No comment' });
     }
     
     const sql = "INSERT INTO comment (comment, post_id) VALUES (?, ?)";
@@ -106,7 +110,7 @@ app.post('/apii/:username', (req, res) => {
 
 
     if (!username || !name || !password) {
-        return res.status(400).json({ message: 'Fehlende Felder: username, name oder password' });
+        return res.status(400).json({ message: 'Error json format' });
     }
 
     console.log(username, name, password)
@@ -114,13 +118,13 @@ app.post('/apii/:username', (req, res) => {
     const query = 'INSERT INTO user (username, name, password) VALUES (?, ?, ?)';
     db.query(query, [username, name, password], (err, result) => {
         if (err) {
-            console.error('Fehler bei der Datenbankanfrage:', err);
-            return res.status(500).send('Fehler beim Speichern der Daten');
+            console.error('Error register1', err);
+            return res.status(500).send('error register2');
         }
-        res.status(200).send({ message: 'Benutzer erfolgreich registriert' });
+        res.status(200).send({ message: 'Sucessful registered' });
     });
 });
 
 app.listen(port, '0.0.0.0', () => {
-    console.log(`Server läuft auf http://<deine-ip>:${port}`);
+    console.log(`Server läuft auf port ${port}`);
 });

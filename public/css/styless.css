@@ -216,6 +216,10 @@ h1 {
     .registeractive {
         height: 280px;
     }
+    
+    .messagescontainer {
+        width: 100%;
+    }
 }
 
 @media (min-width: 600px) {
@@ -229,6 +233,13 @@ h1 {
         max-width: 500px;
     }
     
+    .profile {
+        scale: 1.2;
+    }
+
+    .active {
+        height: 900px;
+    }
 }
 
 @media (min-width: 1900px) {
@@ -318,9 +329,18 @@ h1 {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(6, 1fr);
     width: 90%;
-    max-width: 500px;
+    max-width: 700px;
+    flex-wrap: wrap;
     margin: 0 auto;
     gap: 20px;
+}
+
+@media (max-width: 770px) {
+    .postsgrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
 }
 
 .profilpost {
@@ -333,8 +353,6 @@ h1 {
     box-shadow: 1px 1px 66px -4px rgba(174, 0, 255, 0.75);
 
 }
-
-
 
 .postsgrid img {
     filter: blur(0.5px);
